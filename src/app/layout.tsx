@@ -1,22 +1,23 @@
 import type { Metadata } from "next";
-import { Outfit, Inter } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-outfit",
-  weight: ["300", "400", "600", "800"]
+  variable: "--font-display",
+  weight: ["400", "500", "600", "700"],
 });
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["300", "400", "500", "700"]
+  variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "RӔSET | Digital Art Portfolio",
-  description: "RӔset explores the human condition using a variety of difference mediums. From digital painting, mixed media, to Ai and glitch.",
+  title: "RESET | Contemporary Digital Art",
+  description:
+    "RESET is a contemporary digital art studio and gallery focused on healing, identity, and immersive media.",
 };
 
 export default function RootLayout({
@@ -25,22 +26,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${outfit.variable} ${inter.variable} antialiased bg-black text-white selection:bg-white/20 isolate`}>
-        {/* Sleek Glossy Navigation Bar */}
-        <nav className="fixed w-full z-50 top-0 border-b border-white/5 bg-black/50 backdrop-blur-xl">
-          <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <h1 className="text-2xl font-outfit font-bold tracking-[0.2em] uppercase text-white hover:text-white/80 transition-colors">
-              R<span className="text-white/50">Ӕ</span>set
-            </h1>
-            <div className="hidden md:flex gap-8 font-inter text-sm tracking-widest uppercase text-white/50">
-              <a href="#about" className="hover:text-white transition-colors">About</a>
-              <a href="#gallery" className="hover:text-white transition-colors">Gallery</a>
-              <a href="#exhibitions" className="hover:text-white transition-colors">Exhibitions</a>
-              <a href="#contact" className="hover:text-white transition-colors">Contact</a>
-            </div>
+    <html lang="en">
+      <body className={`${cormorant.variable} ${manrope.variable} site-body`}>
+        <header className="site-header">
+          <div className="site-header__inner">
+            <a href="#home" className="site-brand" aria-label="Reset Home">
+              RESET
+            </a>
+            <nav className="site-nav" aria-label="Primary">
+              <a href="#about" className="site-nav__link">
+                About
+              </a>
+              <a href="#gallery" className="site-nav__link">
+                Gallery
+              </a>
+              <a href="#exhibitions" className="site-nav__link">
+                Exhibitions
+              </a>
+              <a href="#contact" className="site-nav__link">
+                Contact
+              </a>
+            </nav>
           </div>
-        </nav>
+        </header>
         {children}
       </body>
     </html>
