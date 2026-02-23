@@ -349,88 +349,12 @@ a {
     linear-gradient(180deg, #f6f1e8, #efe6d9);
 }
 
-.exhibitions__lead {
-  max-width: 66ch;
-  margin-top: 1rem;
-  line-height: 1.65;
-  color: var(--ink-soft);
+.exhibitions .section-kicker {
+  font-size: 2rem;
 }
 
-.exhibitions__content {
+.exhibitions__grid {
   margin-top: 1.8rem;
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.62fr);
-  gap: 1.2rem;
-  align-items: start;
-}
-
-.timeline {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 0.8rem;
-}
-
-.timeline__item {
-  display: grid;
-  grid-template-columns: 76px minmax(0, 1fr);
-  gap: 1rem;
-  border: 1px solid var(--line);
-  background: rgba(252, 250, 246, 0.88);
-  border-radius: 14px;
-  padding: 0.9rem;
-}
-
-.timeline__year {
-  font-family: var(--font-display), Georgia, serif;
-  font-size: 1.25rem;
-  color: var(--accent);
-  border-right: 1px solid var(--line);
-  padding-right: 0.8rem;
-}
-
-.timeline__venue {
-  font-size: 1rem;
-  letter-spacing: 0.01em;
-  color: var(--ink);
-}
-
-.timeline__city {
-  margin-top: 0.25rem;
-  font-size: 0.83rem;
-  color: var(--ink-soft);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.timeline__work {
-  margin-top: 0.35rem;
-  font-size: 0.88rem;
-  color: var(--ink-soft);
-}
-
-.exhibitions__quote {
-  border-radius: 14px;
-  border: 1px solid var(--line-strong);
-  background: rgba(25, 22, 18, 0.88);
-  color: #f4ede2;
-  padding: 1.1rem;
-}
-
-.exhibitions__quote p {
-  font-family: var(--font-display), Georgia, serif;
-  font-size: 1.22rem;
-  line-height: 1.25;
-}
-
-.exhibitions__quote span {
-  display: block;
-  margin-top: 0.65rem;
-  font-size: 0.74rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: rgba(244, 237, 226, 0.72);
 }
 
 .site-footer {
@@ -552,10 +476,6 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .exhibitions__content {
-    grid-template-columns: 1fr;
-  }
-
   .site-footer__top {
     align-items: start;
     flex-direction: column;
@@ -606,16 +526,6 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .timeline__item {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline__year {
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-    padding-right: 0;
-    padding-bottom: 0.45rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,41 +1,19 @@
+import { LazyVideo } from "./LazyVideo";
+
+type ExhibitionItem = {
+  type: "image" | "video";
+  src: string;
+  poster?: string;
+  title: string;
+};
+
 export function Exhibitions() {
-  const exhibitions = [
-    {
-      year: "2025",
-      venue: "Times Square Arts",
-      city: "New York, USA",
-      work: "Dance With The Devil",
-    },
-    {
-      year: "2025",
-      venue: "MFA Gallery",
-      city: "Rome, Italy",
-      work: "Hestia",
-    },
-    {
-      year: "2024",
-      venue: "IMNOTART Gallery",
-      city: "Chicago, USA",
-      work: "Erimia",
-    },
-    {
-      year: "2024",
-      venue: "Contemporary New Media Week",
-      city: "Beijing, China",
-      work: "By The Moon",
-    },
-    {
-      year: "2023",
-      venue: "Digital Futures Program",
-      city: "Brussels, Belgium",
-      work: "Exhale",
-    },
-    {
-      year: "2023",
-      venue: "Independent Artist Showcase",
-      city: "Toronto, Canada",
-      work: "Alchemy",
-    },
+  const items: ExhibitionItem[] = [
+    { type: "image", src: "/exhibitions/Times Square.webp", title: "Times Square, New York" },
+    { type: "video", src: "/exhibitions/Miami.mp4",         poster: "/exhibitions/Miami-poster.webp", title: "Miami" },
+    { type: "image", src: "/exhibitions/Beeple USA.webp",   title: "Beeple USA" },
+    { type: "image", src: "/exhibitions/Rome.webp",         title: "Rome" },
+    { type: "image", src: "/exhibitions/Romania.webp",      title: "Romania" },
   ];
 
   return (
@@ -43,33 +21,29 @@ export function Exhibitions() {
       <div className="exhibitions__intro">
         <p className="section-kicker">Exhibitions</p>
         <h2 className="section-title">Global presentations</h2>
-        <p className="exhibitions__lead">
-          RESETNFT works have appeared across public and private programs,
-          including urban billboards, gallery installations, and digital-native
-          curation platforms.
-        </p>
       </div>
 
-      <div className="exhibitions__content">
-        <ol className="timeline" aria-label="Exhibition timeline">
-          {exhibitions.map((item) => (
-            <li key={`${item.venue}-${item.work}`} className="timeline__item">
-              <div className="timeline__year">{item.year}</div>
-              <div>
-                <h3 className="timeline__venue">{item.venue}</h3>
-                <p className="timeline__city">{item.city}</p>
-                <p className="timeline__work">Featured work: {item.work}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-
-        <aside className="exhibitions__quote">
-          <p>
-            "Art can hold difficult truths while still making room for beauty."
-          </p>
-          <span>RESETNFT Studio Note</span>
-        </aside>
+      <div className="gallery-grid exhibitions__grid">
+        {items.map((item) => (
+          <figure key={item.src} className="gallery-card">
+            {item.type === "image" ? (
+              <img
+                src={item.src}
+                alt={item.title}
+                loading="lazy"
+                decoding="async"
+                className="gallery-card__media"
+              />
+            ) : (
+              <LazyVideo
+                src={item.src}
+                poster={item.poster}
+                className="gallery-card__media"
+                ariaLabel={item.title}
+              />
+            )}
+          </figure>
+        ))}
       </div>
     </section>
   );
