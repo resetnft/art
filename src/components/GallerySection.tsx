@@ -1,21 +1,22 @@
+import { LazyVideo } from "./LazyVideo";
+
 type GalleryItem = {
   type: "image" | "video";
   src: string;
+  poster?: string;
   title: string;
-  medium: string;
-  year: string;
 };
 
 export function GallerySection() {
   const items: GalleryItem[] = [
-    { type: "video", src: "/collection/Days.mp4",                   title: "Days",                   medium: "Digital video",    year: "2025" },
-    { type: "video", src: "/collection/justagirl.mp4",              title: "Just a Girl",            medium: "Digital video",    year: "2025" },
-    { type: "video", src: "/collection/No Love in the jungle.mp4",  title: "No Love in the Jungle", medium: "Digital video",    year: "2025" },
-    { type: "video", src: "/collection/Playing in your head.mp4",   title: "Playing in Your Head",  medium: "Digital video",    year: "2025" },
-    { type: "video", src: "/collection/save my soul.mp4",           title: "Save My Soul",           medium: "Digital video",    year: "2025" },
-    { type: "image", src: "/collection/dont buy me flowrs.png",     title: "Don't Buy Me Flowers",  medium: "Digital painting", year: "2025" },
-    { type: "image", src: "/collection/High_Def_Chrysalis_.png",    title: "High Def Chrysalis",    medium: "Digital painting", year: "2025" },
-    { type: "image", src: "/collection/reaper collab.png",          title: "Reaper Collab",         medium: "Digital painting", year: "2025" },
+    { type: "video", src: "/collection/Days.mp4",                   poster: "/collection/Days-poster.webp",                   title: "Days" },
+    { type: "video", src: "/collection/justagirl.mp4",              poster: "/collection/justagirl-poster.webp",              title: "Just a Girl" },
+    { type: "video", src: "/collection/No Love in the jungle.mp4",  poster: "/collection/No Love in the jungle-poster.webp",  title: "No Love in the Jungle" },
+    { type: "video", src: "/collection/Playing in your head.mp4",   poster: "/collection/Playing in your head-poster.webp",   title: "Playing in Your Head" },
+    { type: "video", src: "/collection/save my soul.mp4",           poster: "/collection/save my soul-poster.webp",           title: "Save My Soul" },
+    { type: "image", src: "/collection/dont buy me flowrs.webp",    title: "Don't Buy Me Flowers" },
+    { type: "image", src: "/collection/High_Def_Chrysalis_.webp",   title: "High Def Chrysalis" },
+    { type: "image", src: "/collection/reaper collab.webp",         title: "Reaper Collab" },
   ];
 
   return (
@@ -33,18 +34,15 @@ export function GallerySection() {
                 src={item.src}
                 alt={item.title}
                 loading="lazy"
+                decoding="async"
                 className="gallery-card__media"
               />
             ) : (
-              <video
+              <LazyVideo
                 src={item.src}
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="none"
+                poster={item.poster}
                 className="gallery-card__media"
-                aria-label={item.title}
+                ariaLabel={item.title}
               />
             )}
           </figure>
