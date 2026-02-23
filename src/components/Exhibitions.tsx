@@ -14,6 +14,7 @@ export function Exhibitions() {
     { type: "image", src: "/exhibitions/Beeple USA.webp",   title: "Beeple USA" },
     { type: "image", src: "/exhibitions/Rome.webp",         title: "Rome" },
     { type: "image", src: "/exhibitions/Romania.webp",      title: "Romania" },
+    { type: "image", src: "/exhibitions/Belgium.webp",      title: "Belgium" },
   ];
 
   return (
@@ -25,7 +26,7 @@ export function Exhibitions() {
 
       <div className="gallery-grid exhibitions__grid">
         {items.map((item) => (
-          <figure key={item.src} className="gallery-card">
+          <figure key={item.src} className="gallery-card exhibitions__card">
             {item.type === "image" ? (
               <img
                 src={item.src}
@@ -42,6 +43,7 @@ export function Exhibitions() {
                 ariaLabel={item.title}
               />
             )}
+            <figcaption className="exhibitions__card-title">{item.title}</figcaption>
           </figure>
         ))}
       </div>
