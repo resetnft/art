@@ -15,7 +15,7 @@ export function Hero() {
       <div className="hero__content section-shell">
         <div className="hero__copy">
           <p className="section-kicker">Digital Art Studio</p>
-          <h1 className="hero__title">RESET</h1>
+          <h1 className="hero__title">RESETNFT</h1>
           <p className="hero__lead">
             Curated digital works exploring memory, identity, and healing
             through motion, texture, and light.

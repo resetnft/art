@@ -5,7 +5,7 @@ export function FooterLinks() {
       name: "SuperRare",
       url: "https://superrare.com/0x9f65f845d85132eafa36332fe88f34cc8c5a1e68/alchemy-166",
     },
-    { name: "Gamma", url: "https://gamma.io/reset/created" },
+    { name: "Gamma", url: "https://gamma.io/resetnft/created" },
     { name: "OBJKT", url: "https://objkt.com/profile/resetnft/created" },
     { name: "Exchange", url: "https://exchange.art/resetnft/nfts" },
   ];
@@ -57,7 +57,7 @@ export function FooterLinks() {
             ))}
           </div>
           <p className="copyright">
-            © {new Date().getFullYear()} RESET Studio. All rights reserved.
+            © {new Date().getFullYear()} RESETNFT Studio. All rights reserved.
           </p>
         </div>
       </div>

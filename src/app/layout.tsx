@@ -15,9 +15,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "RESET | Contemporary Digital Art",
+  title: "RESETNFT | Contemporary Digital Art",
   description:
-    "RESET is a contemporary digital art studio and gallery focused on healing, identity, and immersive media.",
+    "RESETNFT is a contemporary digital art studio and gallery focused on healing, identity, and immersive media.",
 };
 
 export default function RootLayout({
@@ -30,8 +30,8 @@ export default function RootLayout({
       <body className={`${cormorant.variable} ${manrope.variable} site-body`}>
         <header className="site-header">
           <div className="site-header__inner">
-            <a href="#home" className="site-brand" aria-label="Reset Home">
-              RESET
+            <a href="#home" className="site-brand" aria-label="Resetnft Home">
+              RESETNFT
             </a>
             <nav className="site-nav" aria-label="Primary">
               <a href="#about" className="site-nav__link">

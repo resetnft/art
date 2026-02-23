@@ -5,7 +5,7 @@ export function AboutSection() {
         <p className="section-kicker">About The Artist</p>
         <h2 className="section-title">An evolving body of work rooted in resilience.</h2>
         <p>
-          RESET began painting early and developed a multidisciplinary practice
+          RESETNFT began painting early and developed a multidisciplinary practice
           that spans digital painting, mixed media, AI-assisted workflows, and
           moving image. The work often combines polished composition with
           imperfect textures to reflect the complexity of personal history.
@@ -16,7 +16,7 @@ export function AboutSection() {
           conversation between vulnerability and strength.
         </p>
         <p>
-          Following years of trauma-informed social work, RESET uses visual art
+          Following years of trauma-informed social work, RESETNFT uses visual art
           as a mechanism for memory, accountability, and healing.
         </p>
       </div>

@@ -44,7 +44,7 @@ export function Exhibitions() {
         <p className="section-kicker">Exhibitions</p>
         <h2 className="section-title">Global presentations</h2>
         <p className="exhibitions__lead">
-          RESET works have appeared across public and private programs,
+          RESETNFT works have appeared across public and private programs,
           including urban billboards, gallery installations, and digital-native
           curation platforms.
         </p>
@@ -68,7 +68,7 @@ export function Exhibitions() {
           <p>
             "Art can hold difficult truths while still making room for beauty."
           </p>
-          <span>RESET Studio Note</span>
+          <span>RESETNFT Studio Note</span>
         </aside>
       </div>
     </section>
