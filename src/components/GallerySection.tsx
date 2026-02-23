@@ -26,43 +26,29 @@ export function GallerySection() {
       </div>
 
       <div className="gallery-grid">
-        {items.map((item, index) => {
-          const cardClass =
-            index % 5 === 0
-              ? "gallery-card gallery-card--large"
-              : index % 3 === 0
-                ? "gallery-card gallery-card--tall"
-                : "gallery-card";
-
-          return (
-            <figure key={item.src} className={cardClass}>
-              {item.type === "image" ? (
-                <img
-                  src={item.src}
-                  alt={item.title}
-                  loading="lazy"
-                  className="gallery-card__media"
-                />
-              ) : (
-                <video
-                  src={item.src}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="gallery-card__media"
-                  aria-label={item.title}
-                />
-              )}
-              <figcaption className="gallery-card__caption">
-                <p className="gallery-card__title">{item.title}</p>
-                <p className="gallery-card__meta">
-                  {item.medium} | {item.year}
-                </p>
-              </figcaption>
-            </figure>
-          );
-        })}
+        {items.map((item) => (
+          <figure key={item.src} className="gallery-card">
+            {item.type === "image" ? (
+              <img
+                src={item.src}
+                alt={item.title}
+                loading="lazy"
+                className="gallery-card__media"
+              />
+            ) : (
+              <video
+                src={item.src}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="none"
+                className="gallery-card__media"
+                aria-label={item.title}
+              />
+            )}
+          </figure>
+        ))}
       </div>
     </section>
   );
