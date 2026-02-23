@@ -330,6 +330,7 @@ a {
   border: 1px solid var(--line);
   background: var(--surface);
   box-shadow: 0 12px 34px rgba(18, 16, 14, 0.12);
+  align-self: start;
 }
 
 .gallery-card__media {

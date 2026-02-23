@@ -16,7 +16,8 @@ export function GallerySection() {
     { type: "video", src: "/collection/save my soul_web.mp4",           poster: "/collection/save my soul-poster.webp",           title: "Save My Soul" },
     { type: "image", src: "/collection/dont buy me flowrs.webp",    title: "Don't Buy Me Flowers" },
     { type: "image", src: "/collection/High_Def_Chrysalis_.webp",   title: "High Def Chrysalis" },
-    { type: "image", src: "/collection/reaper collab.webp",         title: "Reaper Collab" },
+    { type: "image", src: "/collection/808.webp",                   title: "808" },
+    { type: "image", src: "/collection/advent calendar.webp",       title: "Advent Calendar" },
   ];
 
   return (
