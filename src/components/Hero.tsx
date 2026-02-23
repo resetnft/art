@@ -30,23 +30,6 @@ export function Hero() {
           </div>
         </div>
 
-        <aside className="hero__panel" aria-label="Studio highlights">
-          <p className="hero__panel-label">Studio Profile</p>
-          <ul className="hero__stats">
-            <li>
-              <span className="hero__stat-value">20+</span>
-              <span className="hero__stat-label">International features</span>
-            </li>
-            <li>
-              <span className="hero__stat-value">60+</span>
-              <span className="hero__stat-label">Original works</span>
-            </li>
-            <li>
-              <span className="hero__stat-value">2019</span>
-              <span className="hero__stat-label">Practice established</span>
-            </li>
-          </ul>
-        </aside>
       </div>
     </section>
   );

@@ -8,48 +8,14 @@ type GalleryItem = {
 
 export function GallerySection() {
   const items: GalleryItem[] = [
-    {
-      type: "image",
-      src: "/_assets/media/aaa3912052ec93c11f115f0888f9cff7.jpg",
-      title: "Unfolding Memory",
-      medium: "Digital painting",
-      year: "2024",
-    },
-    {
-      type: "video",
-      src: "/_assets/video/f69225dd106196c459faf3434455c122.mp4",
-      title: "Echo Chamber",
-      medium: "Looped video",
-      year: "2025",
-    },
-    {
-      type: "image",
-      src: "/_assets/media/e4d44ee0da51b979d0587ab6092a683b.jpg",
-      title: "Fragments of Air",
-      medium: "Mixed media",
-      year: "2023",
-    },
-    {
-      type: "video",
-      src: "/_assets/video/08d5ce08469aca9195f352b24b57a185.mp4",
-      title: "Night Current",
-      medium: "Motion composition",
-      year: "2025",
-    },
-    {
-      type: "image",
-      src: "/_assets/media/cbafa193422b431b7312388efba6b1a6.jpg",
-      title: "Quiet Resistance",
-      medium: "Digital collage",
-      year: "2024",
-    },
-    {
-      type: "video",
-      src: "/_assets/video/6f8c9aaeb48e19b55ac6a3441969785c.mp4",
-      title: "Signal Bloom",
-      medium: "Animated study",
-      year: "2025",
-    },
+    { type: "video", src: "/collection/Days.mp4",                   title: "Days",                   medium: "Digital video",    year: "2025" },
+    { type: "video", src: "/collection/justagirl.mp4",              title: "Just a Girl",            medium: "Digital video",    year: "2025" },
+    { type: "video", src: "/collection/No Love in the jungle.mp4",  title: "No Love in the Jungle", medium: "Digital video",    year: "2025" },
+    { type: "video", src: "/collection/Playing in your head.mp4",   title: "Playing in Your Head",  medium: "Digital video",    year: "2025" },
+    { type: "video", src: "/collection/save my soul.mp4",           title: "Save My Soul",           medium: "Digital video",    year: "2025" },
+    { type: "image", src: "/collection/dont buy me flowrs.png",     title: "Don't Buy Me Flowers",  medium: "Digital painting", year: "2025" },
+    { type: "image", src: "/collection/High_Def_Chrysalis_.png",    title: "High Def Chrysalis",    medium: "Digital painting", year: "2025" },
+    { type: "image", src: "/collection/reaper collab.png",          title: "Reaper Collab",         medium: "Digital painting", year: "2025" },
   ];
 
   return (

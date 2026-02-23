@@ -7,7 +7,7 @@ export function AboutSection() {
         <p>
           RESETNFT began painting early and developed a multidisciplinary practice
           that spans digital painting, mixed media, AI-assisted workflows, and
-          moving image. The work often combines polished composition with
+          animation. The work often combines polished composition with
           imperfect textures to reflect the complexity of personal history.
         </p>
         <p>
@@ -30,10 +30,7 @@ export function AboutSection() {
           playsInline
           className="about__media"
         />
-        <div className="about__media-caption">
-          <p className="about__media-title">Selected Moving Work</p>
-          <p className="about__media-meta">Digital film study, 2025</p>
-        </div>
+
       </div>
     </section>
   );
